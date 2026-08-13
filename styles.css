@@ -1,17 +1,17 @@
 :root {
-  --bg: #07100f;
-  --bg-soft: #0d1817;
-  --panel: rgba(255, 255, 255, 0.075);
-  --panel-strong: rgba(255, 255, 255, 0.11);
-  --line: rgba(255, 255, 255, 0.15);
-  --text: #f4fbf8;
-  --muted: #a9bab5;
-  --teal: #20c7b0;
-  --teal-soft: #48d9c5;
-  --green: #53ec7a;
+  --bg: #0b1113;
+  --bg-soft: #121b1e;
+  --panel: rgba(255, 255, 255, 0.07);
+  --panel-strong: rgba(255, 255, 255, 0.12);
+  --line: rgba(255, 255, 255, 0.13);
+  --text: #f5f7f4;
+  --muted: #a8b5b2;
+  --teal: #25b8a7;
+  --teal-soft: #5fd6c7;
+  --green: #7bd88f;
   --rose: #ff8f96;
-  --gold: #e8c46b;
-  --shadow: 0 28px 90px rgba(0, 0, 0, 0.3);
+  --gold: #d8b15c;
+  --shadow: 0 22px 70px rgba(0, 0, 0, 0.26);
   --max: 1110px;
 }
 
@@ -22,8 +22,8 @@
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 84% 20%, rgba(32, 199, 176, 0.16), transparent 28%),
-    radial-gradient(circle at 18% 70%, rgba(72, 217, 197, 0.1), transparent 28%),
+    linear-gradient(180deg, rgba(37, 184, 167, 0.16), transparent 410px),
+    radial-gradient(circle at 82% 18%, rgba(216, 177, 92, 0.09), transparent 24%),
     var(--bg);
   color: var(--text);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -49,8 +49,8 @@ a {
   gap: 22px;
   width: min(100%, var(--max));
   margin: 0 auto;
-  padding: 16px 22px;
-  background: rgba(7, 16, 15, 0.86);
+  padding: 14px 22px;
+  background: rgba(11, 17, 19, 0.88);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
 }
@@ -64,13 +64,13 @@ a {
 
 .brand-photo {
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   overflow: hidden;
-  border: 2px solid var(--green);
+  border: 2px solid rgba(123, 216, 143, 0.82);
   border-radius: 50%;
   background: #16302c;
-  box-shadow: 0 0 0 5px rgba(32, 199, 176, 0.16);
+  box-shadow: 0 0 0 4px rgba(37, 184, 167, 0.12);
   flex: 0 0 auto;
 }
 
@@ -103,8 +103,8 @@ a {
 }
 
 .site-nav a {
-  padding: 10px 12px;
-  border-radius: 8px;
+  padding: 9px 11px;
+  border-radius: 10px;
   color: var(--muted);
   font-size: 14px;
   font-weight: 800;
@@ -134,21 +134,21 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  gap: 46px;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 34px;
   align-items: center;
   width: min(100%, var(--max));
   margin: 0 auto;
-  padding: 34px 22px 30px;
+  padding: 42px 22px 28px;
 }
 
 .hero-copy {
-  padding: 48px;
+  padding: clamp(28px, 5vw, 48px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 28px;
+  border-radius: 30px;
   background:
-    linear-gradient(135deg, rgba(22, 191, 171, 0.94), rgba(73, 199, 193, 0.82)),
-    #1fbfae;
+    linear-gradient(135deg, rgba(25, 154, 143, 0.95), rgba(62, 177, 171, 0.82)),
+    #219b90;
   box-shadow: var(--shadow);
 }
 
@@ -161,7 +161,7 @@ a {
   padding: 8px 14px;
   border-radius: 999px;
   background: rgba(83, 236, 122, 0.13);
-  color: var(--green);
+  color: #b4f4bf;
   font-size: 12px;
   font-weight: 900;
   letter-spacing: 0;
@@ -186,7 +186,7 @@ h2 {
 h1 {
   margin-bottom: 16px;
   color: #ffffff;
-  font-size: clamp(48px, 8vw, 86px);
+  font-size: clamp(44px, 7vw, 78px);
 }
 
 h2 {
@@ -199,7 +199,7 @@ h2 {
   max-width: 720px;
   margin-bottom: 18px;
   color: #effffb;
-  font-size: clamp(20px, 2.5vw, 30px);
+  font-size: clamp(19px, 2.3vw, 28px);
   font-weight: 900;
   line-height: 1.28;
 }
@@ -236,13 +236,13 @@ h2 {
   justify-content: center;
   min-height: 48px;
   padding: 0 18px;
-  border-radius: 10px;
+  border-radius: 12px;
   font-weight: 900;
 }
 
 .button.primary {
-  background: linear-gradient(135deg, #35f068, #22d0b9);
-  color: #07201b;
+  background: #f4f8f4;
+  color: #123b37;
 }
 
 .button.secondary {
@@ -252,21 +252,23 @@ h2 {
 }
 
 .portrait {
+  width: min(100%, 330px);
+  justify-self: center;
   margin: 0;
-  padding: 14px;
+  padding: 12px;
   border: 1px solid var(--line);
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.08);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.075);
   box-shadow: var(--shadow);
 }
 
 .portrait img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 355px;
   object-fit: cover;
   object-position: center top;
-  border-radius: 22px;
+  border-radius: 20px;
   background: #16302c;
 }
 
@@ -294,17 +296,17 @@ h2 {
 .list-panel,
 .section {
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 22px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.045)),
-    rgba(255, 255, 255, 0.055);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+    linear-gradient(145deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.04)),
+    rgba(255, 255, 255, 0.052);
+  box-shadow: 0 16px 46px rgba(0, 0, 0, 0.16);
 }
 
 .quick-links a {
   display: grid;
   gap: 9px;
-  min-height: 168px;
+  min-height: 154px;
   padding: 20px;
   transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
 }
@@ -331,7 +333,7 @@ h2 {
 .section {
   width: min(calc(100% - 44px), var(--max));
   margin: 44px auto 72px;
-  padding: 42px;
+  padding: clamp(28px, 4vw, 42px);
 }
 
 .two-column {
@@ -353,10 +355,10 @@ h2 {
 .page-hero,
 .about-hero {
   margin-bottom: 24px;
-  padding: 52px;
+  padding: clamp(30px, 5vw, 50px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 28px;
-  background: linear-gradient(135deg, rgba(22, 191, 171, 0.92), rgba(73, 199, 193, 0.74));
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(25, 154, 143, 0.94), rgba(62, 177, 171, 0.76));
   box-shadow: var(--shadow);
 }
 
@@ -383,14 +385,14 @@ h2 {
 }
 
 .about-hero img {
-  width: 168px;
-  height: 168px;
-  margin-bottom: 22px;
-  border: 4px solid var(--green);
+  width: 128px;
+  height: 128px;
+  margin-bottom: 18px;
+  border: 3px solid rgba(123, 216, 143, 0.92);
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  box-shadow: 0 0 0 8px rgba(7, 16, 15, 0.16);
+  box-shadow: 0 0 0 7px rgba(7, 16, 15, 0.14);
 }
 
 .about-hero p {
@@ -488,6 +490,14 @@ h2 {
     padding-top: 28px;
   }
 
+  .portrait {
+    width: min(100%, 300px);
+  }
+
+  .portrait img {
+    height: 322px;
+  }
+
   .hero-copy,
   .page-hero,
   .about-hero,
@@ -497,5 +507,47 @@ h2 {
 
   .site-footer {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand small {
+    display: none;
+  }
+
+  h1 {
+    font-size: clamp(38px, 13vw, 58px);
+  }
+
+  .title-line {
+    font-size: 20px;
+  }
+
+  .hero,
+  .page {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .hero-copy,
+  .page-hero,
+  .about-hero,
+  .section {
+    border-radius: 22px;
+    padding: 24px;
+  }
+
+  .portrait {
+    width: min(100%, 260px);
+  }
+
+  .portrait img {
+    height: 280px;
+    border-radius: 16px;
+  }
+
+  .about-hero img {
+    width: 112px;
+    height: 112px;
   }
 }
