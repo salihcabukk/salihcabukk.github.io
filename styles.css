@@ -289,6 +289,14 @@ a {
   line-height: 1.45;
 }
 
+.education-note a {
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
+  text-underline-offset: 3px;
+}
+
 .eyebrow,
 .section-kicker {
   display: inline-flex;
