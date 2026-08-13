@@ -144,7 +144,7 @@ a {
   align-items: center;
   width: min(100%, var(--max));
   margin: 0 auto;
-  padding: 42px 22px 28px;
+  padding: 42px 22px 76px;
 }
 
 .hero-copy {
