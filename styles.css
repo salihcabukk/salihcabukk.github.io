@@ -79,12 +79,60 @@ a {
   background: #ffffff;
   box-shadow: 0 0 0 4px rgba(37, 184, 167, 0.1);
   flex: 0 0 auto;
+  cursor: zoom-in;
 }
 
 .brand-photo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.logo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  place-items: center;
+  padding: 28px;
+  background: rgba(2, 8, 9, 0.82);
+  backdrop-filter: blur(12px);
+}
+
+.logo-lightbox.is-open {
+  display: grid;
+}
+
+.logo-lightbox img {
+  width: min(86vw, 620px);
+  max-height: 78vh;
+  padding: clamp(16px, 4vw, 34px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 34px 120px rgba(0, 0, 0, 0.55);
+  object-fit: contain;
+}
+
+.logo-lightbox-close {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.logo-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .brand strong,
