@@ -297,6 +297,11 @@ a {
   text-underline-offset: 3px;
 }
 
+.education-note strong {
+  color: #ffffff;
+  font-weight: 900;
+}
+
 .eyebrow,
 .section-kicker {
   display: inline-flex;
