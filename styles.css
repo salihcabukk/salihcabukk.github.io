@@ -245,11 +245,28 @@ a {
 }
 
 .education-list span {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
   margin-bottom: 6px;
   color: #cff7da;
   font-size: 12px;
   font-weight: 900;
+}
+
+.degree-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 0 13px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff7db3, #ffca70);
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .education-list h2 {
