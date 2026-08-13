@@ -64,8 +64,8 @@ a {
 
 .brand-photo {
   display: block;
-  width: 42px;
-  height: 42px;
+  width: 34px;
+  height: 34px;
   overflow: hidden;
   border: 2px solid rgba(123, 216, 143, 0.82);
   border-radius: 50%;
@@ -92,8 +92,7 @@ a {
 }
 
 .brand small {
-  color: var(--muted);
-  font-size: 12px;
+  display: none;
 }
 
 .site-nav {
@@ -134,8 +133,8 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 26px;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 28px;
   align-items: center;
   width: min(100%, var(--max));
   margin: 0 auto;
@@ -166,14 +165,56 @@ a {
 }
 
 .hero-avatar {
-  width: 108px;
-  height: 108px;
-  margin-bottom: 22px;
-  border: 3px solid rgba(123, 216, 143, 0.95);
+  width: 76px;
+  height: 76px;
+  margin-bottom: 18px;
+  border: 2px solid rgba(123, 216, 143, 0.95);
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  box-shadow: 0 0 0 7px rgba(7, 16, 15, 0.12);
+  box-shadow: 0 0 0 6px rgba(7, 16, 15, 0.12);
+}
+
+.education-list {
+  display: grid;
+  gap: 12px;
+}
+
+.education-list article {
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  background: rgba(7, 16, 15, 0.13);
+}
+
+.education-list span {
+  display: block;
+  margin-bottom: 5px;
+  color: #cff7da;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.education-list h2 {
+  margin-bottom: 3px;
+  color: #ffffff;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.education-list p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 800;
+}
+
+.education-note {
+  display: block;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .eyebrow,
@@ -231,6 +272,7 @@ h2 {
 .lead,
 .prose p,
 .quick-links small,
+.quick-links p,
 .card p,
 .page-hero p,
 .about-hero p,
@@ -276,9 +318,48 @@ h2 {
 }
 
 .portrait,
-.hero-info {
-  width: min(100%, 280px);
+.hero-info,
+.profile-card {
+  width: min(100%, 220px);
   justify-self: center;
+}
+
+.profile-card {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.045)),
+    rgba(255, 255, 255, 0.06);
+  box-shadow: var(--shadow);
+}
+
+.profile-card img {
+  display: block;
+  width: 100%;
+  height: 235px;
+  border-radius: 18px;
+  object-fit: cover;
+  object-position: center top;
+  background: #16302c;
+}
+
+.profile-card figcaption {
+  display: grid;
+  gap: 2px;
+  padding: 13px 4px 2px;
+}
+
+.profile-card strong {
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.profile-card span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .hero-info {
@@ -385,6 +466,12 @@ h2 {
 .quick-links strong {
   color: var(--text);
   font-size: 21px;
+}
+
+.quick-links p {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .section {
@@ -570,7 +657,7 @@ h2 {
   color: #bfc8d6;
 }
 
-.publication-card small {
+.publication-card .pub-meta {
   display: block;
   margin-bottom: 14px;
   color: #8f9bad;
@@ -614,8 +701,8 @@ h2 {
 }
 
 .about-hero img {
-  width: 128px;
-  height: 128px;
+  width: 104px;
+  height: 104px;
   margin-bottom: 18px;
   border: 3px solid rgba(123, 216, 143, 0.92);
   border-radius: 50%;
@@ -732,6 +819,14 @@ h2 {
     justify-self: stretch;
   }
 
+  .profile-card {
+    width: min(100%, 200px);
+  }
+
+  .profile-card img {
+    height: 210px;
+  }
+
   .publication-stats {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -786,13 +881,21 @@ h2 {
   }
 
   .hero-avatar {
+    width: 68px;
+    height: 68px;
+  }
+
+  .about-hero img {
     width: 86px;
     height: 86px;
   }
 
-  .about-hero img {
-    width: 96px;
-    height: 96px;
+  .profile-card {
+    width: min(100%, 180px);
+  }
+
+  .profile-card img {
+    height: 190px;
   }
 
   .publication-stats article {
