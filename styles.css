@@ -21,6 +21,7 @@
 
 body {
   margin: 0;
+  padding-top: 76px;
   background:
     linear-gradient(180deg, rgba(37, 184, 167, 0.16), transparent 410px),
     radial-gradient(circle at 82% 18%, rgba(216, 177, 92, 0.09), transparent 24%),
@@ -40,8 +41,10 @@ a {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 30;
   display: flex;
   align-items: center;
@@ -53,6 +56,9 @@ a {
   background: rgba(11, 17, 19, 0.88);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0 0 18px 18px;
 }
 
 .brand {
@@ -604,6 +610,13 @@ h2 {
 
 .publication-section {
   margin: 0 0 70px;
+  scroll-margin-top: 100px;
+}
+
+.page-hero,
+.about-hero,
+.publications-hero {
+  scroll-margin-top: 100px;
 }
 
 .publication-section h2 {
@@ -776,7 +789,7 @@ h2 {
     display: block;
   }
 
-  .site-nav:not(.visible) {
+  .site-nav {
     position: absolute;
     top: 82px;
     right: 22px;
@@ -789,8 +802,7 @@ h2 {
     box-shadow: var(--shadow);
   }
 
-  .site-nav.is-open,
-  .site-nav.visible {
+  .site-nav.is-open {
     display: grid;
   }
 
