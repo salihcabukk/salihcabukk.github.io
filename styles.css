@@ -302,6 +302,20 @@ a {
   font-weight: 900;
 }
 
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.profile-link img {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.95);
+}
+
 .eyebrow,
 .section-kicker {
   display: inline-flex;
