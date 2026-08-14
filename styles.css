@@ -220,48 +220,32 @@ a {
 .media-hero {
   position: relative;
   isolation: isolate;
-  min-height: clamp(390px, 52vh, 560px);
+  min-height: clamp(310px, 42vh, 430px);
   overflow: hidden;
-  background: #dbeef7;
+  background: #c9ddec;
   border-bottom: 1px solid rgba(15, 39, 66, 0.16);
 }
 
 .media-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.58), rgba(219, 238, 247, 0.2)),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(8, 126, 139, 0.08));
+  display: none;
 }
 
 .media-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image:
-    linear-gradient(rgba(15, 39, 66, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 39, 66, 0.055) 1px, transparent 1px);
-  background-size: 180px 180px;
-  opacity: 0.22;
+  display: none;
 }
 
 .media-hero-content {
   display: grid;
-  grid-template-columns: minmax(190px, 240px) minmax(280px, 480px);
-  align-items: end;
-  gap: clamp(26px, 4vw, 44px);
-  width: min(100%, var(--max));
+  place-items: center;
+  width: 100%;
   min-height: inherit;
   margin: 0 auto;
-  padding: clamp(86px, 14vh, 132px) 22px clamp(46px, 8vh, 82px);
+  padding: clamp(86px, 12vh, 120px) 22px clamp(34px, 7vh, 58px);
 }
 
 .media-portrait {
   display: block;
-  width: min(100%, 240px);
+  width: min(100%, 230px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center top;
@@ -272,18 +256,21 @@ a {
 }
 
 .media-identity {
+  width: min(100%, var(--max));
+  margin: 0 auto;
+  padding: 30px 22px 8px;
   color: var(--navy);
-  text-shadow: none;
+  text-align: center;
 }
 
 .media-identity h1 {
-  max-width: 520px;
+  max-width: none;
   margin: 0 0 14px;
   color: var(--navy);
   font-family: Inter, system-ui, sans-serif;
-  font-size: clamp(46px, 6vw, 78px);
+  font-size: clamp(42px, 5vw, 66px);
   font-weight: 900;
-  line-height: 0.95;
+  line-height: 1;
 }
 
 .media-identity p {
@@ -1116,14 +1103,15 @@ h2 {
   }
 
   .media-hero-content {
-    grid-template-columns: 1fr;
-    align-items: start;
-    gap: 22px;
-    padding: 58px 22px 56px;
+    padding: 82px 22px 42px;
   }
 
   .media-portrait {
     width: min(100%, 220px);
+  }
+
+  .media-identity {
+    padding-top: 26px;
   }
 
   .media-identity h1 {
