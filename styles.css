@@ -304,7 +304,7 @@ a {
 .education-section {
   width: 100%;
   max-width: none;
-  grid-template-columns: 22px 190px clamp(24px, 4vw, 46px) minmax(0, 1110px) minmax(22px, 1fr);
+  grid-template-columns: clamp(34px, 3.6vw, 54px) 202px clamp(28px, 4vw, 52px) minmax(0, 1110px) minmax(22px, 1fr);
   align-items: start;
   justify-items: stretch;
   gap: 0;
@@ -341,24 +341,27 @@ a {
 .section-menu {
   grid-column: 2;
   display: grid;
-  gap: 7px;
+  gap: 8px;
   width: 100%;
-  padding: 16px 0 0;
+  padding: 24px 0;
+  border-top: 1px solid rgba(15, 39, 66, 0.14);
+  border-right: 0;
+  border-bottom: 1px solid rgba(15, 39, 66, 0.14);
   background: transparent;
   justify-self: start;
 }
 
 .section-menu a {
   display: block;
-  padding: 8px 0;
-  color: #000000;
+  padding: 7px 0;
+  color: #111111;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 950;
   line-height: 1.2;
 }
 
 .section-menu a:hover {
-  color: var(--teal);
+  color: #000000;
 }
 
 .hero-avatar {
@@ -1184,7 +1187,7 @@ h2 {
     grid-column: auto;
     grid-template-columns: repeat(4, max-content);
     gap: 14px;
-    padding: 0;
+    padding: 14px 0;
     overflow-x: auto;
   }
 
