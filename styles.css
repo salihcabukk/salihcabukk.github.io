@@ -43,7 +43,7 @@ a {
 }
 
 .site-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -72,7 +72,7 @@ a {
 }
 
 .home-page .site-header {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: calc(var(--hero-photo-top) - var(--brand-size));
   z-index: 90;
