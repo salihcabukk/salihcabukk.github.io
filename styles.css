@@ -247,8 +247,6 @@ a {
 }
 
 .media-photo-block {
-  display: grid;
-  gap: 10px;
   width: clamp(360px, 34vw, 430px);
   flex: 0 0 clamp(360px, 34vw, 430px);
   margin: 0;
@@ -267,40 +265,34 @@ a {
   clip-path: inset(0 0 0 6%);
 }
 
-.media-photo-block figcaption {
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 1.25;
-}
-
 .media-identity {
   width: min(44vw, 520px);
+  min-height: clamp(360px, 34vw, 430px);
   margin: 0;
   padding: 0;
   color: #ffffff;
   text-align: left;
-  align-self: stretch;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .media-identity h1 {
   max-width: none;
   margin: 0 0 8px;
   color: #ffffff;
-  font-family: Inter, system-ui, sans-serif;
-  font-size: clamp(34px, 4.2vw, 52px);
-  font-weight: 900;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(44px, 4vw, 46px);
+  font-weight: 700;
   line-height: 0.98;
 }
 
 .media-identity p {
   margin: 0;
   color: rgba(255, 255, 255, 0.92);
-  font-size: clamp(17px, 1.65vw, 21px);
-  font-weight: 500;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
   line-height: 1.22;
 }
 
@@ -1173,14 +1165,15 @@ h2 {
 
   .media-identity {
     width: min(48vw, 430px);
+    min-height: 330px;
   }
 
   .media-identity h1 {
-    font-size: clamp(34px, 5.4vw, 48px);
+    font-size: clamp(40px, 5.2vw, 46px);
   }
 
   .media-identity p {
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .hero {
@@ -1268,6 +1261,7 @@ h2 {
 
   .media-identity {
     width: min(100%, 520px);
+    min-height: auto;
     text-align: center;
   }
 }
@@ -1295,11 +1289,11 @@ h2 {
   }
 
   .media-identity h1 {
-    font-size: clamp(34px, 11vw, 48px);
+    font-size: clamp(36px, 10vw, 44px);
   }
 
   .media-identity p {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .title-line {
