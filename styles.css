@@ -347,7 +347,7 @@ a {
 .section-menu {
   grid-column: 2;
   display: grid;
-  gap: 38px;
+  gap: 48px;
   width: 100%;
   margin-top: 167px;
   padding: 34px 0;
