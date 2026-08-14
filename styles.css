@@ -23,8 +23,7 @@ body {
   margin: 0;
   padding-top: 76px;
   background:
-    linear-gradient(180deg, rgba(8, 126, 139, 0.1), transparent 430px),
-    radial-gradient(circle at 82% 18%, rgba(52, 168, 83, 0.08), transparent 24%),
+    linear-gradient(180deg, rgba(15, 39, 66, 0.045), transparent 380px),
     var(--bg);
   color: var(--text);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -194,17 +193,19 @@ a {
   justify-items: center;
   width: min(100%, var(--max));
   margin: 0 auto;
-  padding: 34px 22px 76px;
+  padding: 34px 0 76px;
 }
 
 .hero-copy {
-  width: min(100%, 860px);
+  width: 100%;
   position: relative;
   overflow: hidden;
   padding: clamp(26px, 4vw, 40px);
   border: 1px solid var(--line);
+  border-top: 5px solid var(--teal);
   border-radius: 30px;
-  background: var(--panel);
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f4f8f9 100%);
   box-shadow: var(--shadow);
 }
 
@@ -215,7 +216,7 @@ a {
   bottom: -110px;
   width: 260px;
   height: 260px;
-  border: 1px solid rgba(8, 126, 139, 0.13);
+  border: 1px solid rgba(15, 39, 66, 0.08);
   border-radius: 50%;
 }
 
@@ -223,11 +224,11 @@ a {
   width: 76px;
   height: 76px;
   margin-bottom: 18px;
-  border: 2px solid rgba(52, 168, 83, 0.95);
+  border: 2px solid rgba(8, 126, 139, 0.65);
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  box-shadow: 0 0 0 6px rgba(52, 168, 83, 0.1);
+  box-shadow: 0 0 0 6px rgba(8, 126, 139, 0.08);
 }
 
 .education-list {
@@ -247,17 +248,17 @@ a {
   margin-top: 16px;
   padding: 16px 18px 18px;
   border: 1px solid rgba(15, 39, 66, 0.1);
-  border-left: 4px solid var(--green);
+  border-left: 4px solid var(--teal);
   border-radius: 18px;
   background:
-    linear-gradient(135deg, rgba(52, 168, 83, 0.08), rgba(8, 126, 139, 0.04)),
+    linear-gradient(135deg, rgba(8, 126, 139, 0.055), rgba(15, 39, 66, 0.025)),
     #ffffff;
 }
 
 .education-list .degree-entry-master {
   border-left-color: var(--teal);
   background:
-    linear-gradient(135deg, rgba(8, 126, 139, 0.08), rgba(52, 168, 83, 0.04)),
+    linear-gradient(135deg, rgba(8, 126, 139, 0.06), rgba(15, 39, 66, 0.025)),
     #ffffff;
 }
 
@@ -283,9 +284,9 @@ a {
 }
 
 .degree-entry-doctorate .doctorate-badge {
-  background: var(--green) !important;
+  background: var(--navy) !important;
   box-shadow:
-    0 12px 28px rgba(52, 168, 83, 0.22),
+    0 12px 28px rgba(15, 39, 66, 0.22),
     inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
 }
 
@@ -311,10 +312,10 @@ a {
   padding: 0 20px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.26);
-  background: var(--green);
+  background: var(--teal);
   color: #ffffff;
   box-shadow:
-    0 12px 28px rgba(52, 168, 83, 0.22),
+    0 12px 28px rgba(8, 126, 139, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   font-style: normal;
   font-size: 16px;
@@ -386,8 +387,8 @@ a {
   margin: 0 0 18px;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(52, 168, 83, 0.12);
-  color: var(--green);
+  background: rgba(8, 126, 139, 0.09);
+  color: var(--teal);
   font-size: 12px;
   font-weight: 900;
   letter-spacing: 0;
@@ -742,7 +743,7 @@ h2 {
   width: 70px;
   height: 70px;
   border-radius: 16px;
-  background: linear-gradient(135deg, var(--teal), var(--green));
+  background: linear-gradient(135deg, var(--teal), var(--navy));
   color: #ffffff;
   font-weight: 900;
 }
@@ -813,7 +814,7 @@ h2 {
   margin: 0 0 18px;
   padding: 0 14px;
   border-radius: 999px;
-  background: var(--green);
+  background: var(--navy);
   color: #ffffff;
   font-weight: 900;
 }
@@ -891,7 +892,7 @@ h2 {
   width: 104px;
   height: 104px;
   margin-bottom: 18px;
-  border: 3px solid rgba(52, 168, 83, 0.9);
+  border: 3px solid rgba(8, 126, 139, 0.62);
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
@@ -955,7 +956,12 @@ h2 {
   margin: 0 auto;
   padding: 26px 22px 40px;
   color: var(--muted);
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(8, 126, 139, 0.24);
+}
+
+.site-footer a {
+  color: var(--teal);
+  font-weight: 800;
 }
 
 @media (max-width: 900px) {
@@ -990,6 +996,8 @@ h2 {
   .hero {
     min-height: auto;
     padding-top: 28px;
+    padding-right: 22px;
+    padding-left: 22px;
   }
 
   .portrait {
