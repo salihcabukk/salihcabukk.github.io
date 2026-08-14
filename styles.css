@@ -244,6 +244,16 @@ a {
   background: transparent;
 }
 
+.education-list .degree-entry {
+  padding: 16px 18px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-left: 4px solid rgba(255, 202, 112, 0.9);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 125, 179, 0.13), rgba(255, 202, 112, 0.09)),
+    rgba(7, 16, 15, 0.12);
+}
+
 .education-list span {
   display: flex;
   align-items: center;
@@ -260,6 +270,8 @@ a {
   align-items: center;
   justify-content: center;
   min-height: 28px;
+  width: max-content;
+  margin-bottom: 9px;
   padding: 0 13px;
   border-radius: 999px;
   background: linear-gradient(135deg, #ff7db3, #ffca70);
