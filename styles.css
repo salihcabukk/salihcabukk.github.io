@@ -328,6 +328,46 @@ a {
   border-radius: 50%;
 }
 
+.education-topline {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.education-topline .eyebrow {
+  margin-bottom: 0;
+}
+
+.education-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.education-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 13px;
+  border: 1px solid rgba(8, 126, 139, 0.18);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.education-links a:hover {
+  border-color: rgba(8, 126, 139, 0.34);
+  background: rgba(8, 126, 139, 0.07);
+  color: var(--teal);
+}
+
 .hero-avatar {
   width: 76px;
   height: 76px;
@@ -1137,6 +1177,15 @@ h2 {
     padding-top: 28px;
     padding-right: 22px;
     padding-left: 22px;
+  }
+
+  .education-topline {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .education-links {
+    justify-content: flex-start;
   }
 
   .portrait {
