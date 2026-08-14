@@ -252,11 +252,12 @@ a {
   flex: 0 0 clamp(360px, 34vw, 430px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: center top;
+  object-position: 62% top;
   border: 0;
   border-radius: 0;
   background: transparent;
   box-shadow: 0 24px 56px rgba(15, 39, 66, 0.24);
+  clip-path: inset(0 0 0 6%);
 }
 
 .media-identity {
@@ -301,6 +302,9 @@ a {
 }
 
 .education-section {
+  grid-template-columns: 170px minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(24px, 4vw, 46px);
   padding-top: 56px;
 }
 
@@ -328,29 +332,17 @@ a {
   border-radius: 50%;
 }
 
-.education-layout {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 170px 1fr;
-  gap: clamp(22px, 4vw, 42px);
-  align-items: start;
-}
-
-.education-content {
-  min-width: 0;
-}
-
 .section-menu {
   display: grid;
-  gap: 4px;
-  padding: 4px 18px 4px 0;
-  border-right: 1px solid rgba(15, 39, 66, 0.12);
+  gap: 7px;
+  width: 100%;
+  padding: 16px 0 0;
+  background: transparent;
 }
 
 .section-menu a {
   display: block;
-  padding: 9px 0;
+  padding: 8px 0;
   color: var(--navy);
   font-size: 15px;
   font-weight: 900;
@@ -1172,17 +1164,16 @@ h2 {
     padding-left: 22px;
   }
 
-  .education-layout {
+  .education-section {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
   }
 
   .section-menu {
     grid-template-columns: repeat(4, max-content);
     gap: 14px;
-    padding: 0 0 16px;
-    border-right: 0;
-    border-bottom: 1px solid rgba(15, 39, 66, 0.12);
+    padding: 0;
+    overflow-x: auto;
   }
 
   .portrait {
