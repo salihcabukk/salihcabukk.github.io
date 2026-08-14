@@ -220,13 +220,9 @@ a {
 .media-hero {
   position: relative;
   isolation: isolate;
-  min-height: clamp(470px, 62vh, 680px);
+  min-height: clamp(390px, 52vh, 560px);
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(15, 39, 66, 0.9) 0%, rgba(15, 39, 66, 0.7) 42%, rgba(8, 126, 139, 0.58) 100%),
-    url("profile.jpg");
-  background-position: center 28%;
-  background-size: cover;
+  background: #dbeef7;
   border-bottom: 1px solid rgba(15, 39, 66, 0.16);
 }
 
@@ -236,8 +232,8 @@ a {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(15, 39, 66, 0.18)),
-    rgba(15, 39, 66, 0.2);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.58), rgba(219, 238, 247, 0.2)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(8, 126, 139, 0.08));
 }
 
 .media-hero::after {
@@ -246,44 +242,44 @@ a {
   inset: 0;
   z-index: -1;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(15, 39, 66, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 39, 66, 0.055) 1px, transparent 1px);
   background-size: 180px 180px;
-  opacity: 0.28;
+  opacity: 0.22;
 }
 
 .media-hero-content {
   display: grid;
-  grid-template-columns: minmax(230px, 310px) minmax(280px, 480px);
+  grid-template-columns: minmax(190px, 240px) minmax(280px, 480px);
   align-items: end;
   gap: clamp(26px, 4vw, 44px);
   width: min(100%, var(--max));
   min-height: inherit;
   margin: 0 auto;
-  padding: clamp(76px, 13vh, 150px) 22px clamp(64px, 10vh, 112px);
+  padding: clamp(86px, 14vh, 132px) 22px clamp(46px, 8vh, 82px);
 }
 
 .media-portrait {
   display: block;
-  width: min(100%, 310px);
+  width: min(100%, 240px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center top;
-  border: 8px solid rgba(255, 255, 255, 0.92);
+  border: 8px solid rgba(255, 255, 255, 0.96);
   border-radius: 0;
   background: #ffffff;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 22px 54px rgba(15, 39, 66, 0.18);
 }
 
 .media-identity {
-  color: #ffffff;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.28);
+  color: var(--navy);
+  text-shadow: none;
 }
 
 .media-identity h1 {
   max-width: 520px;
   margin: 0 0 14px;
-  color: #ffffff;
+  color: var(--navy);
   font-family: Inter, system-ui, sans-serif;
   font-size: clamp(46px, 6vw, 78px);
   font-weight: 900;
@@ -292,7 +288,7 @@ a {
 
 .media-identity p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--text);
   font-size: clamp(18px, 2vw, 24px);
   font-weight: 700;
   line-height: 1.28;
@@ -1127,7 +1123,7 @@ h2 {
   }
 
   .media-portrait {
-    width: min(100%, 260px);
+    width: min(100%, 220px);
   }
 
   .media-identity h1 {
@@ -1199,7 +1195,7 @@ h2 {
   }
 
   .media-portrait {
-    width: min(100%, 230px);
+    width: min(100%, 200px);
     border-width: 6px;
   }
 
