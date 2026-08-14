@@ -328,43 +328,36 @@ a {
   border-radius: 50%;
 }
 
-.education-topline {
+.education-layout {
   position: relative;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 18px;
-  margin-bottom: 18px;
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: clamp(22px, 4vw, 42px);
+  align-items: start;
 }
 
-.education-topline .eyebrow {
-  margin-bottom: 0;
+.education-content {
+  min-width: 0;
 }
 
-.education-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 8px;
+.section-menu {
+  display: grid;
+  gap: 4px;
+  padding: 4px 18px 4px 0;
+  border-right: 1px solid rgba(15, 39, 66, 0.12);
 }
 
-.education-links a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 36px;
-  padding: 0 13px;
-  border: 1px solid rgba(8, 126, 139, 0.18);
-  border-radius: 999px;
-  background: #ffffff;
+.section-menu a {
+  display: block;
+  padding: 9px 0;
   color: var(--navy);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 900;
+  line-height: 1.2;
 }
 
-.education-links a:hover {
-  border-color: rgba(8, 126, 139, 0.34);
-  background: rgba(8, 126, 139, 0.07);
+.section-menu a:hover {
   color: var(--teal);
 }
 
@@ -1179,13 +1172,17 @@ h2 {
     padding-left: 22px;
   }
 
-  .education-topline {
-    align-items: flex-start;
-    flex-direction: column;
+  .education-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .education-links {
-    justify-content: flex-start;
+  .section-menu {
+    grid-template-columns: repeat(4, max-content);
+    gap: 14px;
+    padding: 0 0 16px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(15, 39, 66, 0.12);
   }
 
   .portrait {
