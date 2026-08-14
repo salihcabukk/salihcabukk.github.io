@@ -64,6 +64,10 @@ a {
   padding-top: 0;
 }
 
+.site-header:empty {
+  display: none;
+}
+
 .home-page .site-header {
   background: rgba(15, 39, 66, 0.68);
   border-color: rgba(255, 255, 255, 0.14);
