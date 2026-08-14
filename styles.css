@@ -302,16 +302,19 @@ a {
 }
 
 .education-section {
-  width: min(100%, calc(var(--max) + 260px));
-  grid-template-columns: 190px minmax(0, var(--max));
+  width: 100%;
+  max-width: none;
+  grid-template-columns: 22px 190px clamp(24px, 4vw, 46px) minmax(0, 1110px) minmax(22px, 1fr);
   align-items: start;
-  gap: clamp(24px, 4vw, 46px);
+  justify-items: stretch;
+  gap: 0;
   padding-top: 56px;
-  padding-right: 22px;
-  padding-left: 22px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .hero-copy {
+  grid-column: 4;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -336,6 +339,7 @@ a {
 }
 
 .section-menu {
+  grid-column: 2;
   display: grid;
   gap: 7px;
   width: 100%;
@@ -1172,13 +1176,20 @@ h2 {
     grid-template-columns: 1fr;
     gap: 18px;
     width: min(100%, var(--max));
+    padding-right: 22px;
+    padding-left: 22px;
   }
 
   .section-menu {
+    grid-column: auto;
     grid-template-columns: repeat(4, max-content);
     gap: 14px;
     padding: 0;
     overflow-x: auto;
+  }
+
+  .hero-copy {
+    grid-column: auto;
   }
 
   .portrait {
