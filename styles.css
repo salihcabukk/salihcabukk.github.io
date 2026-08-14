@@ -220,9 +220,9 @@ a {
 .media-hero {
   position: relative;
   isolation: isolate;
-  min-height: clamp(310px, 42vh, 430px);
+  min-height: clamp(430px, 54vh, 620px);
   overflow: hidden;
-  background: #c9ddec;
+  background: #6f92ad;
   border-bottom: 1px solid rgba(15, 39, 66, 0.16);
 }
 
@@ -236,37 +236,40 @@ a {
 
 .media-hero-content {
   display: grid;
-  place-items: center;
-  width: 100%;
+  grid-template-columns: minmax(260px, 340px) minmax(280px, 520px);
+  align-items: center;
+  justify-content: center;
+  gap: clamp(28px, 5vw, 58px);
+  width: min(100%, var(--max));
   min-height: inherit;
   margin: 0 auto;
-  padding: clamp(86px, 12vh, 120px) 22px clamp(34px, 7vh, 58px);
+  padding: clamp(104px, 15vh, 150px) 22px clamp(70px, 11vh, 118px);
 }
 
 .media-portrait {
   display: block;
-  width: min(100%, 230px);
+  width: min(100%, 340px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center top;
-  border: 8px solid rgba(255, 255, 255, 0.96);
+  border: 0;
   border-radius: 0;
-  background: #ffffff;
-  box-shadow: 0 22px 54px rgba(15, 39, 66, 0.18);
+  background: transparent;
+  box-shadow: 0 24px 56px rgba(15, 39, 66, 0.24);
 }
 
 .media-identity {
-  width: min(100%, var(--max));
-  margin: 0 auto;
-  padding: 30px 22px 8px;
-  color: var(--navy);
-  text-align: center;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  text-align: left;
 }
 
 .media-identity h1 {
   max-width: none;
   margin: 0 0 14px;
-  color: var(--navy);
+  color: #ffffff;
   font-family: Inter, system-ui, sans-serif;
   font-size: clamp(42px, 5vw, 66px);
   font-weight: 900;
@@ -275,7 +278,7 @@ a {
 
 .media-identity p {
   margin: 0;
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.92);
   font-size: clamp(18px, 2vw, 24px);
   font-weight: 700;
   line-height: 1.28;
@@ -1103,15 +1106,18 @@ h2 {
   }
 
   .media-hero-content {
-    padding: 82px 22px 42px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 22px;
+    padding: 92px 22px 58px;
   }
 
   .media-portrait {
-    width: min(100%, 220px);
+    width: min(100%, 280px);
   }
 
   .media-identity {
-    padding-top: 26px;
+    text-align: center;
   }
 
   .media-identity h1 {
@@ -1183,8 +1189,7 @@ h2 {
   }
 
   .media-portrait {
-    width: min(100%, 200px);
-    border-width: 6px;
+    width: min(100%, 250px);
   }
 
   .title-line {
