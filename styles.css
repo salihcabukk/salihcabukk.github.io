@@ -246,10 +246,17 @@ a {
   padding-left: clamp(70px, 9vw, 128px);
 }
 
-.media-portrait {
-  display: block;
+.media-photo-block {
+  display: grid;
+  gap: 10px;
   width: clamp(360px, 34vw, 430px);
   flex: 0 0 clamp(360px, 34vw, 430px);
+  margin: 0;
+}
+
+.media-portrait {
+  display: block;
+  width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: 62% top;
@@ -258,6 +265,13 @@ a {
   background: transparent;
   box-shadow: 0 24px 56px rgba(15, 39, 66, 0.24);
   clip-path: inset(0 0 0 6%);
+}
+
+.media-photo-block figcaption {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.25;
 }
 
 .media-identity {
@@ -274,20 +288,20 @@ a {
 
 .media-identity h1 {
   max-width: none;
-  margin: 0 0 14px;
+  margin: 0 0 8px;
   color: #ffffff;
   font-family: Inter, system-ui, sans-serif;
-  font-size: clamp(42px, 5vw, 66px);
+  font-size: clamp(34px, 4.2vw, 52px);
   font-weight: 900;
-  line-height: 1;
+  line-height: 0.98;
 }
 
 .media-identity p {
   margin: 0;
   color: rgba(255, 255, 255, 0.92);
-  font-size: clamp(18px, 2vw, 24px);
-  font-weight: 700;
-  line-height: 1.28;
+  font-size: clamp(17px, 1.65vw, 21px);
+  font-weight: 500;
+  line-height: 1.22;
 }
 
 .hero {
@@ -1152,7 +1166,7 @@ h2 {
     padding-left: 40px;
   }
 
-  .media-portrait {
+  .media-photo-block {
     width: 330px;
     flex-basis: 330px;
   }
@@ -1162,11 +1176,11 @@ h2 {
   }
 
   .media-identity h1 {
-    font-size: clamp(38px, 6vw, 56px);
+    font-size: clamp(34px, 5.4vw, 48px);
   }
 
   .media-identity p {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .hero {
@@ -1247,7 +1261,7 @@ h2 {
     padding: 92px 22px 58px;
   }
 
-  .media-portrait {
+  .media-photo-block {
     width: min(100%, 300px);
     flex-basis: auto;
   }
@@ -1272,7 +1286,7 @@ h2 {
     padding-left: 16px;
   }
 
-  .media-portrait {
+  .media-photo-block {
     width: min(100%, 250px);
   }
 
@@ -1281,11 +1295,11 @@ h2 {
   }
 
   .media-identity h1 {
-    font-size: clamp(42px, 12vw, 64px);
+    font-size: clamp(34px, 11vw, 48px);
   }
 
   .media-identity p {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .title-line {
