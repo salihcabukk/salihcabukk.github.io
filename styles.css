@@ -304,7 +304,7 @@ a {
 .education-section {
   width: 100%;
   max-width: none;
-  grid-template-columns: clamp(8px, 1.2vw, 18px) 202px clamp(42px, 5vw, 70px) minmax(0, 1110px) minmax(22px, 1fr);
+  grid-template-columns: clamp(46px, 4vw, 72px) 202px clamp(28px, 4vw, 52px) minmax(0, 1110px) minmax(22px, 1fr);
   align-items: start;
   justify-items: stretch;
   gap: 0;
@@ -343,7 +343,7 @@ a {
   display: grid;
   gap: 8px;
   width: 100%;
-  margin-top: 34px;
+  margin-top: 72px;
   padding: 24px 0;
   border-top: 1px solid rgba(15, 39, 66, 0.28);
   border-right: 0;
