@@ -13,6 +13,8 @@
   --gold: #d9a441;
   --shadow: 0 22px 70px rgba(15, 39, 66, 0.12);
   --max: 1110px;
+  --hero-photo-top: 120px;
+  --brand-size: 66px;
 }
 
 * {
@@ -70,9 +72,12 @@ a {
 
 .home-page .site-header {
   left: 0;
+  top: calc(var(--hero-photo-top) - var(--brand-size));
   width: 100%;
   transform: none;
   padding-left: clamp(103px, 8.5vw, 129px);
+  padding-top: 0;
+  padding-bottom: 0;
   background: transparent;
   border-color: transparent;
   border-radius: 0;
@@ -111,8 +116,8 @@ a {
 
 .brand-photo {
   display: block;
-  width: 66px;
-  height: 66px;
+  width: var(--brand-size);
+  height: var(--brand-size);
   overflow: hidden;
   padding: 0;
   border: 0;
@@ -262,7 +267,7 @@ a {
   width: 100%;
   min-height: inherit;
   margin: 0 auto;
-  padding: 120px 0 88px;
+  padding: var(--hero-photo-top) 0 88px;
 }
 
 .media-photo-block {
@@ -1136,6 +1141,10 @@ h2 {
 }
 
 @media (max-width: 900px) {
+  :root {
+    --hero-photo-top: 92px;
+  }
+
   .menu-button {
     display: block;
   }
@@ -1179,7 +1188,7 @@ h2 {
 
   .media-hero-content {
     grid-template-columns: 40px 0 24px 330px 22px minmax(260px, 1fr) 22px;
-    padding: 92px 0 70px;
+    padding: var(--hero-photo-top) 0 70px;
   }
 
   .media-photo-block {
@@ -1266,6 +1275,10 @@ h2 {
 }
 
 @media (max-width: 720px) {
+  :root {
+    --hero-photo-top: 92px;
+  }
+
   .media-hero {
     min-height: auto;
   }
@@ -1275,7 +1288,7 @@ h2 {
     align-items: center;
     justify-items: center;
     gap: 22px;
-    padding: 92px 22px 58px;
+    padding: var(--hero-photo-top) 22px 58px;
   }
 
   .media-photo-block {
