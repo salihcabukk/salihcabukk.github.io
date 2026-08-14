@@ -310,7 +310,7 @@ a {
 .education-section {
   width: 100%;
   max-width: none;
-  grid-template-columns: clamp(84px, 7vw, 110px) 202px clamp(28px, 4vw, 52px) minmax(0, 1110px) minmax(22px, 1fr);
+  grid-template-columns: clamp(103px, 8.5vw, 129px) 202px clamp(28px, 4vw, 52px) minmax(0, 1110px) minmax(22px, 1fr);
   align-items: start;
   justify-items: stretch;
   gap: 0;
@@ -347,9 +347,9 @@ a {
 .section-menu {
   grid-column: 2;
   display: grid;
-  gap: 8px;
+  gap: 38px;
   width: 100%;
-  margin-top: 110px;
+  margin-top: 167px;
   padding: 34px 0;
   border-top: 1px solid rgba(15, 39, 66, 0.28);
   border-right: 0;
@@ -362,7 +362,7 @@ a {
   display: block;
   padding: 7px 0;
   color: #111111;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 950;
   line-height: 1.2;
 }
