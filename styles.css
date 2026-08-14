@@ -69,9 +69,10 @@ a {
 }
 
 .home-page .site-header {
-  background: rgba(15, 39, 66, 0.68);
-  border-color: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 18px 50px rgba(15, 39, 66, 0.18);
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .home-page .brand strong {
