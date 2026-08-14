@@ -69,8 +69,13 @@ a {
 }
 
 .home-page .site-header {
+  left: 0;
+  width: 100%;
+  transform: none;
+  padding-left: clamp(103px, 8.5vw, 129px);
   background: transparent;
   border-color: transparent;
+  border-radius: 0;
   box-shadow: none;
   backdrop-filter: none;
 }
@@ -106,8 +111,8 @@ a {
 
 .brand-photo {
   display: block;
-  width: 46px;
-  height: 46px;
+  width: 66px;
+  height: 66px;
   overflow: hidden;
   padding: 0;
   border: 0;
@@ -122,6 +127,10 @@ a {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.home-page .brand-photo img {
+  mix-blend-mode: multiply;
 }
 
 .logo-lightbox {
@@ -1141,6 +1150,10 @@ h2 {
   .home-page .site-nav {
     border-color: rgba(255, 255, 255, 0.16);
     background: rgba(15, 39, 66, 0.96);
+  }
+
+  .home-page .site-header {
+    padding-left: 22px;
   }
 
   .site-nav.is-open {
