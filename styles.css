@@ -879,6 +879,10 @@ h2 {
 
 .side-page > .section-menu {
   grid-column: 2;
+  position: sticky;
+  top: 24px;
+  z-index: 4;
+  margin-top: 0;
 }
 
 .side-page-content {
