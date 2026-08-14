@@ -13,6 +13,7 @@
   --gold: #d9a441;
   --shadow: 0 22px 70px rgba(15, 39, 66, 0.12);
   --max: 1110px;
+  --site-left: clamp(103px, 8.5vw, 129px);
   --hero-photo-top: 120px;
   --brand-size: 66px;
 }
@@ -74,8 +75,10 @@ a {
   left: 0;
   top: calc(var(--hero-photo-top) - var(--brand-size));
   width: 100%;
+  height: var(--brand-size);
   transform: none;
-  padding-left: clamp(103px, 8.5vw, 129px);
+  align-items: flex-start;
+  padding-left: var(--site-left);
   padding-top: 0;
   padding-bottom: 0;
   background: transparent;
@@ -114,6 +117,11 @@ a {
   min-width: 0;
 }
 
+.home-page .brand {
+  height: var(--brand-size);
+  align-items: flex-start;
+}
+
 .brand-photo {
   display: block;
   width: var(--brand-size);
@@ -126,6 +134,7 @@ a {
   box-shadow: none;
   flex: 0 0 auto;
   cursor: zoom-in;
+  line-height: 0;
 }
 
 .brand-photo img {
@@ -256,7 +265,7 @@ a {
 .media-hero-content {
   display: grid;
   grid-template-columns:
-    clamp(103px, 8.5vw, 129px)
+    var(--site-left)
     202px
     clamp(28px, 4vw, 52px)
     clamp(360px, 34vw, 430px)
@@ -335,7 +344,7 @@ a {
 .education-section {
   width: 100%;
   max-width: none;
-  grid-template-columns: clamp(103px, 8.5vw, 129px) 202px clamp(28px, 4vw, 52px) minmax(0, 1110px) minmax(22px, 1fr);
+  grid-template-columns: var(--site-left) 202px clamp(28px, 4vw, 52px) minmax(0, 1110px) minmax(22px, 1fr);
   align-items: start;
   justify-items: stretch;
   gap: 0;
@@ -393,7 +402,14 @@ a {
 }
 
 .section-menu a:hover {
-  color: #000000;
+  color: #0f2742;
+}
+
+.section-menu a.is-active,
+.section-menu a.is-active:hover,
+.section-menu a.is-active.is-overview,
+.section-menu a.is-active.is-blue {
+  color: #b0005a;
 }
 
 .hero-avatar {
@@ -850,6 +866,26 @@ h2 {
   padding: 34px 22px 76px;
 }
 
+.side-page {
+  display: grid;
+  width: 100%;
+  max-width: none;
+  grid-template-columns: var(--site-left) 202px clamp(28px, 4vw, 52px) minmax(0, 1110px) minmax(22px, 1fr);
+  align-items: start;
+  justify-items: stretch;
+  gap: 0;
+  padding: 56px 0 76px;
+}
+
+.side-page > .section-menu {
+  grid-column: 2;
+}
+
+.side-page-content {
+  grid-column: 4;
+  min-width: 0;
+}
+
 .page-hero,
 .about-hero {
   margin-bottom: 24px;
@@ -863,6 +899,10 @@ h2 {
 
 .publications-page {
   max-width: 1180px;
+}
+
+.publications-page.side-page {
+  max-width: none;
 }
 
 .publications-hero {
@@ -1142,6 +1182,7 @@ h2 {
 
 @media (max-width: 900px) {
   :root {
+    --site-left: 40px;
     --hero-photo-top: 92px;
   }
 
@@ -1168,7 +1209,7 @@ h2 {
   }
 
   .home-page .site-header {
-    padding-left: 22px;
+    padding-left: var(--site-left);
   }
 
   .site-nav.is-open {
@@ -1223,12 +1264,24 @@ h2 {
     padding-left: 22px;
   }
 
+  .side-page {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    width: min(100%, var(--max));
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
   .section-menu {
     grid-column: auto;
     grid-template-columns: repeat(4, max-content);
     gap: 14px;
     padding: 14px 0;
     overflow-x: auto;
+  }
+
+  .side-page-content {
+    grid-column: auto;
   }
 
   .hero-copy {
