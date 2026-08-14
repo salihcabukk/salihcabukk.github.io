@@ -342,6 +342,7 @@ a {
   color: rgba(255, 255, 255, 0.72);
   font-size: 13px;
   line-height: 1.45;
+  text-align: justify;
 }
 
 .education-note a {
