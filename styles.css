@@ -245,6 +245,8 @@ a {
 }
 
 .education-list .degree-entry {
+  position: relative;
+  margin-top: 16px;
   padding: 16px 18px 18px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-left: 4px solid rgba(255, 202, 112, 0.9);
@@ -269,14 +271,17 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 28px;
+  min-height: 34px;
   width: max-content;
-  margin-bottom: 9px;
-  padding: 0 13px;
+  margin-top: -34px;
+  margin-bottom: 12px;
+  padding: 0 16px;
   border-radius: 999px;
   background: linear-gradient(135deg, #ff7db3, #ffca70);
   color: #ffffff;
+  box-shadow: 0 12px 28px rgba(255, 125, 179, 0.22);
   font-style: normal;
+  font-size: 15px;
   font-weight: 900;
   line-height: 1;
 }
