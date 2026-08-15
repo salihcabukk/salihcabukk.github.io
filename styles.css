@@ -265,10 +265,10 @@ a {
   position: absolute;
   left: calc(var(--site-left) + 202px + clamp(28px, 4vw, 52px));
   right: 0;
-  bottom: -115px;
+  bottom: -96px;
   z-index: 0;
   display: block;
-  height: 115px;
+  height: 96px;
   background: #6f92ad;
   pointer-events: none;
 }
@@ -369,6 +369,7 @@ a {
 .hero-copy {
   grid-column: 4;
   width: 100%;
+  margin-top: 46px;
   position: relative;
   overflow: hidden;
   padding: clamp(26px, 4vw, 40px);
@@ -902,6 +903,7 @@ h2 {
 .side-page-content {
   grid-column: 4;
   min-width: 0;
+  margin-top: 46px;
 }
 
 .page-hero,
@@ -1305,10 +1307,12 @@ h2 {
 
   .side-page-content {
     grid-column: auto;
+    margin-top: 0;
   }
 
   .hero-copy {
     grid-column: auto;
+    margin-top: 0;
   }
 
   .portrait {
