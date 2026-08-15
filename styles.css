@@ -15,7 +15,7 @@
   --max: 1110px;
   --site-left: clamp(103px, 8.5vw, 129px);
   --hero-photo-top: 120px;
-  --brand-size: 80px;
+  --brand-size: 100px;
 }
 
 * {
