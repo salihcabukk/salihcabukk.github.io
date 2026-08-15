@@ -414,6 +414,11 @@ a {
   color: #ec008c;
 }
 
+.section-menu a.is-overview.is-active,
+.section-menu a[aria-current="page"] {
+  color: #ec008c;
+}
+
 .hero-avatar {
   width: 76px;
   height: 76px;
