@@ -1300,7 +1300,7 @@ h2 {
 
   .section-menu {
     grid-column: auto;
-    grid-template-columns: repeat(4, max-content);
+    grid-template-columns: repeat(5, max-content);
     gap: 14px;
     padding: 14px 0;
     overflow-x: auto;
