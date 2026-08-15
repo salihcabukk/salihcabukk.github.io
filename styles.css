@@ -16,6 +16,7 @@
   --site-left: clamp(103px, 8.5vw, 129px);
   --hero-photo-top: 120px;
   --brand-size: 100px;
+  --section-menu-offset: 167px;
 }
 
 * {
@@ -369,7 +370,7 @@ a {
 .hero-copy {
   grid-column: 4;
   width: 100%;
-  margin-top: 46px;
+  margin-top: var(--section-menu-offset);
   position: relative;
   overflow: hidden;
   padding: clamp(26px, 4vw, 40px);
@@ -397,7 +398,7 @@ a {
   display: grid;
   gap: 48px;
   width: 100%;
-  margin-top: 167px;
+  margin-top: var(--section-menu-offset);
   padding: 34px 0;
   border-top: 1px solid rgba(15, 39, 66, 0.28);
   border-right: 0;
@@ -903,7 +904,7 @@ h2 {
 .side-page-content {
   grid-column: 4;
   min-width: 0;
-  margin-top: 46px;
+  margin-top: var(--section-menu-offset);
 }
 
 .page-hero,
