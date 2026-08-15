@@ -265,10 +265,10 @@ a {
   position: absolute;
   left: calc(var(--site-left) + 202px + clamp(28px, 4vw, 52px));
   right: 0;
-  bottom: -190px;
+  bottom: -115px;
   z-index: 0;
   display: block;
-  height: 190px;
+  height: 115px;
   background: #6f92ad;
   pointer-events: none;
 }
