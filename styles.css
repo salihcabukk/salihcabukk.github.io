@@ -251,7 +251,7 @@ a {
   position: relative;
   isolation: isolate;
   min-height: 560px;
-  overflow: hidden;
+  overflow: visible;
   background: #6f92ad;
   border-bottom: 1px solid rgba(15, 39, 66, 0.16);
 }
@@ -261,10 +261,21 @@ a {
 }
 
 .media-hero::after {
-  display: none;
+  content: "";
+  position: absolute;
+  left: calc(var(--site-left) + 202px + clamp(28px, 4vw, 52px));
+  right: 0;
+  bottom: -190px;
+  z-index: 0;
+  display: block;
+  height: 190px;
+  background: #6f92ad;
+  pointer-events: none;
 }
 
 .media-hero-content {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns:
     var(--site-left)
@@ -1232,6 +1243,11 @@ h2 {
 
   .media-hero {
     min-height: 500px;
+    overflow: hidden;
+  }
+
+  .media-hero::after {
+    display: none;
   }
 
   .media-hero-content {
